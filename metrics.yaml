@@ -1,0 +1,613 @@
+metrics_to_be_collected:
+  ec2:
+    - name: "CPUUtilization"
+      namespace: "AWS/EC2"
+      unit: "Percent"
+      dimensions:
+        - Name: "InstanceId"
+          Example: "i-05bcffabccdeee00b"
+    
+    - name: "DiskReadOps"
+      namespace: "AWS/EC2"
+      unit: "Count"
+      dimensions:
+        - Name: "InstanceId"
+          Example: "i-05bcffabccdeee00b"
+    
+    - name: "DiskWriteOps"
+      namespace: "AWS/EC2"
+      unit: "Count"
+      dimensions:
+        - Name: "InstanceId"
+          Example: "i-05bcffabccdeee00b"
+
+    - name: "NetworkIn"
+      namespace: "AWS/EC2"
+      unit: "Bytes"
+      dimensions:
+        - Name: "InstanceId"
+          Example: "i-05bcffabccdeee00b"
+
+    - name: "NetworkOut"
+      namespace: "AWS/EC2"
+      unit: "Bytes"
+      dimensions:
+        - Name: "InstanceId"
+          Example: "i-05bcffabccdeee00b"
+
+    - name: "StatusCheckFailed"
+      namespace: "AWS/EC2"
+      unit: "Count"
+      dimensions:
+        - Name: "InstanceId"
+          Example: "i-05bcffabccdeee00b"
+
+    - name: "StatusCheckFailed_Instance"
+      namespace: "AWS/EC2"
+      unit: "Count"
+      dimensions:
+        - Name: "InstanceId"
+          Example: "i-05bcffabccdeee00b"
+
+    - name: "StatusCheckFailed_System"
+      namespace: "AWS/EC2"
+      unit: "Count"
+      dimensions:
+        - Name: "InstanceId"
+          Example: "i-05bcffabccdeee00b"
+          
+    - name: "mem_used_percent"
+      namespace: "CWAgent"
+      unit: "Percent"
+      dimensions:
+        - Name: "InstanceId"
+          Example: "i-05bcffabccdeee00b"
+
+    - name: "disk_used_percent"
+      namespace: "CWAgent"
+      unit: "Percent"
+      dimensions:
+        - Name: "InstanceId"
+          Example: "i-05bcffabccdeee00b" 
+
+    - name: "diskio_io_time"
+      namespace: "CWAgent"
+      unit: "Milliseconds"
+      dimensions:
+        - Name: "InstanceId"
+          Example: "i-05bcffabccdeee00b"
+    
+    - name: "disk_inodes_free"
+      namespace: "CWAgent"
+      unit: "Count"
+      dimensions:
+        - Name: "InstanceId"
+          Example: "i-05bcffabccdeee00b"
+
+    - name: "cpu_usage_iowait"
+      namespace: "CWAgent"
+      unit: "Percent"
+      dimensions:
+        - Name: "InstanceId"
+          Example: "i-05bcffabccdeee00b"  
+
+    - name: "cpu_usage_idle"
+      namespace: "CWAgent"
+      unit: "Percent"
+      dimensions:
+        - Name: "InstanceId"
+          Example: "i-05bcffabccdeee00b" 
+
+    - name: "cpu_usage_system"
+      namespace: "CWAgent"
+      unit: "Percent"
+      dimensions:
+        - Name: "InstanceId"
+          Example: "i-05bcffabccdeee00b" 
+
+    - name: "cpu_usage_user"
+      namespace: "CWAgent"
+      unit: "Percent"
+      dimensions:
+        - Name: "InstanceId"
+          Example: "i-05bcffabccdeee00b" 
+    
+
+  rds:
+    - name: "CPUUtilization"
+      namespace: "AWS/RDS"
+      unit: "Percent"
+      dimensions:
+        - Name: "DBInstanceIdentifier"
+          Example: "my-rds-instance"
+
+    - name: "DatabaseConnections"
+      namespace: "AWS/RDS"
+      unit: "Count"
+      dimensions:
+        - Name: "DBInstanceIdentifier"
+          Example: "my-rds-instance"
+
+    - name: "FreeStorageSpace"
+      namespace: "AWS/RDS"
+      unit: "Bytes"
+      dimensions:
+        - Name: "DBInstanceIdentifier"
+          Example: "my-rds-instance"
+
+    - name: "ReadIOPS"
+      namespace: "AWS/RDS"
+      unit: "Count/Second"
+      dimensions:
+        - Name: "DBInstanceIdentifier"
+          Example: "my-rds-instance"
+
+    - name: "WriteIOPS"
+      namespace: "AWS/RDS"
+      unit: "Count/Second"
+      dimensions:
+        - Name: "DBInstanceIdentifier"
+          Example: "my-rds-instance"
+
+    - name: "ReadLatency"
+      namespace: "AWS/RDS"
+      unit: "Seconds"
+      dimensions:
+        - Name: "DBInstanceIdentifier"
+          Example: "my-rds-instance"
+
+    - name: "WriteLatency"
+      namespace: "AWS/RDS"
+      unit: "Seconds"
+      dimensions:
+        - Name: "DBInstanceIdentifier"
+          Example: "my-rds-instance"
+
+    - name: "ReadThroughput"
+      namespace: "AWS/RDS"
+      unit: "Bytes/Second"
+      dimensions:
+        - Name: "DBInstanceIdentifier"
+          Example: "my-rds-instance"
+
+    - name: "WriteThroughput"
+      namespace: "AWS/RDS"
+      unit: "Bytes/Second"
+      dimensions:
+        - Name: "DBInstanceIdentifier"
+          Example: "my-rds-instance"
+
+    - name: "BurstBalance"
+      namespace: "AWS/RDS"
+      unit: "Percent"
+      dimensions:
+        - Name: "DBInstanceIdentifier"
+          Example: "my-rds-instance"
+
+  lambda:
+    - name: "Invocations"
+      namespace: "AWS/Lambda"
+      unit: "Count"
+      dimensions:
+        - Name: "FunctionName"
+          Example: "my-lambda-function"
+
+    - name: "Errors"
+      namespace: "AWS/Lambda"
+      unit: "Count"
+      dimensions:
+        - Name: "FunctionName"
+          Example: "my-lambda-function"
+
+    - name: "Duration"
+      namespace: "AWS/Lambda"
+      unit: "Milliseconds"
+      dimensions:
+        - Name: "FunctionName"
+          Example: "my-lambda-function"
+
+    - name: "Throttles"
+      namespace: "AWS/Lambda"
+      unit: "Count"
+      dimensions:
+        - Name: "FunctionName"
+          Example: "my-lambda-function"
+
+    - name: "IteratorAge"
+      namespace: "AWS/Lambda"
+      unit: "Milliseconds"
+      dimensions:
+        - Name: "FunctionName"
+          Example: "my-lambda-function"
+
+    - name: "ConcurrentExecutions"
+      namespace: "AWS/Lambda"
+      unit: "Count"
+      dimensions:
+        - Name: "FunctionName"
+          Example: "my-lambda-function"
+
+    - name: "UnreservedConcurrentExecutions"
+      namespace: "AWS/Lambda"
+      unit: "Count"
+      dimensions:
+        - Name: "FunctionName"
+          Example: "my-lambda-function"
+
+    - name: "DeadLetterErrors"
+      namespace: "AWS/Lambda"
+      unit: "Count"
+      dimensions:
+        - Name: "FunctionName"
+          Example: "my-lambda-function"
+
+    - name: "DestinationDeliveryFailures"
+      namespace: "AWS/Lambda"
+      unit: "Count"
+      dimensions:
+        - Name: "FunctionName"
+          Example: "my-lambda-function"
+
+    - name: "DestinationDeliverySuccesses"
+      namespace: "AWS/Lambda"
+      unit: "Count"
+      dimensions:
+        - Name: "FunctionName"
+          Example: "my-lambda-function"
+
+  alb:
+    - name: "RequestCount"
+      namespace: "AWS/ApplicationELB"
+      unit: "Count"
+      dimensions:
+        - Name: "LoadBalancer"
+          Example: "app/my-load-balancer/50dc6c495c0c9188"
+
+    - name: "HTTPCode_ELB_4XX_Count"
+      namespace: "AWS/ApplicationELB"
+      unit: "Count"
+      dimensions:
+        - Name: "LoadBalancer"
+          Example: "app/my-load-balancer/50dc6c495c0c9188"
+
+    - name: "HTTPCode_ELB_5XX_Count"
+      namespace: "AWS/ApplicationELB"
+      unit: "Count"
+      dimensions:
+        - Name: "LoadBalancer"
+          Example: "app/my-load-balancer/50dc6c495c0c9188"
+  
+    - name: "ActiveConnectionCount"
+      namespace: "AWS/ApplicationELB"
+      unit: "Count"
+      dimensions:
+        - Name: "LoadBalancer"
+          Example: "app/my-load-balancer/50dc6c495c0c9188"
+
+    - name: "NewConnectionCount"
+      namespace: "AWS/ApplicationELB"
+      unit: "Count"
+      dimensions:
+        - Name: "LoadBalancer"
+          Example: "app/my-load-balancer/50dc6c495c0c9188"
+
+    - name: "ProcessedBytes"
+      namespace: "AWS/ApplicationELB"
+      unit: "Bytes"
+      dimensions:
+        - Name: "LoadBalancer"
+          Example: "app/my-load-balancer/50dc6c495c0c9188"
+
+    - name: "TargetResponseTime"
+      namespace: "AWS/ApplicationELB"
+      unit: "Seconds"
+      dimensions:
+        - Name: "LoadBalancer"
+          Example: "app/my-load-balancer/50dc6c495c0c9188"
+
+    - name: "HTTPCode_Target_2XX_Count"
+      namespace: "AWS/ApplicationELB"
+      unit: "Count"
+      dimensions:
+        - Name: "LoadBalancer"
+          Example: "app/my-load-balancer/50dc6c495c0c9188"
+
+    - name: "HTTPCode_Target_3XX_Count"
+      namespace: "AWS/ApplicationELB"
+      unit: "Count"
+      dimensions:
+        - Name: "LoadBalancer"
+          Example: "app/my-load-balancer/50dc6c495c0c9188"
+
+    - name: "HTTPCode_Target_4XX_Count"
+      namespace: "AWS/ApplicationELB"
+      unit: "Count"
+      dimensions:
+        - Name: "LoadBalancer"
+          Example: "app/my-load-balancer/50dc6c495c0c9188"
+
+    - name: "HTTPCode_Target_5XX_Count"
+      namespace: "AWS/ApplicationELB"
+      unit: "Count"
+      dimensions:
+        - Name: "LoadBalancer"
+          Example: "app/my-load-balancer/50dc6c495c0c9188"
+
+  nlb:
+    - name: "ActiveFlowCount"
+      namespace: "AWS/NetworkELB"
+      unit: "Count"
+      dimensions:
+        - Name: "LoadBalancer"
+          Example: "net/my-network-load-balancer/50dc6c495c0c9188"
+
+    - name: "ProcessedBytes"
+      namespace: "AWS/NetworkELB"
+      unit: "Bytes"
+      dimensions:
+        - Name: "LoadBalancer"
+          Example: "net/my-network-load-balancer/50dc6c495c0c9188"
+
+    - name: "TCP_Client_Reset_Count"
+      namespace: "AWS/NetworkELB"
+      unit: "Count"
+      dimensions:
+        - Name: "LoadBalancer"
+          Example: "net/my-network-load-balancer/50dc6c495c0c9188"
+
+  sqs:
+    - name: "ApproximateNumberOfMessagesVisible"
+      namespace: "AWS/SQS"
+      unit: "Count"
+      dimensions:
+        - Name: "QueueName"
+          Example: "my-queue"
+
+    - name: "ApproximateNumberOfMessagesDelayed"
+      namespace: "AWS/SQS"
+      unit: "Count"
+      dimensions:
+        - Name: "QueueName"
+          Example: "my-queue"
+
+    - name: "ApproximateNumberOfMessagesNotVisible"
+      namespace: "AWS/SQS"
+      unit: "Count"
+      dimensions:
+        - Name: "QueueName"
+          Example: "my-queue"
+
+    - name: "NumberOfMessagesSent"
+      namespace: "AWS/SQS"
+      unit: "Count"
+      dimensions:
+        - Name: "QueueName"
+          Example: "my-queue"
+
+    - name: "NumberOfMessagesReceived"
+      namespace: "AWS/SQS"
+      unit: "Count"
+      dimensions:
+        - Name: "QueueName"
+          Example: "my-queue"
+
+    - name: "NumberOfMessagesDeleted"
+      namespace: "AWS/SQS"
+      unit: "Count"
+      dimensions:
+        - Name: "QueueName"
+          Example: "my-queue"
+
+    - name: "NumberOfEmptyReceives"
+      namespace: "AWS/SQS"
+      unit: "Count"
+      dimensions:
+        - Name: "QueueName"
+          Example: "my-queue"
+
+    - name: "SentMessageSize"
+      namespace: "AWS/SQS"
+      unit: "Bytes"
+      dimensions:
+        - Name: "QueueName"
+          Example: "my-queue"
+
+    - name: "ReceiveMessageSize"
+      namespace: "AWS/SQS"
+      unit: "Bytes"
+      dimensions:
+        - Name: "QueueName"
+          Example: "my-queue"
+
+    - name: "SentMessageCountPerSecond"
+      namespace: "AWS/SQS"
+      unit: "Count/Second"
+      dimensions:
+        - Name: "QueueName"
+          Example: "my-queue"
+
+    - name: "ReceiveMessageCountPerSecond"
+      namespace: "AWS/SQS"
+      unit: "Count/Second"
+      dimensions:
+        - Name: "QueueName"
+          Example: "my-queue"
+
+  apigateway:
+    - name: "Count"
+      namespace: "AWS/ApiGateway"
+      unit: "Count"
+      dimensions:
+        - Name: "ApiName"
+          Example: "my-api"
+
+    - name: "4XXError"
+      namespace: "AWS/ApiGateway"
+      unit: "Count"
+      dimensions:
+        - Name: "ApiName"
+          Example: "my-api"
+
+    - name: "5XXError"
+      namespace: "AWS/ApiGateway"
+      unit: "Count"
+      dimensions:
+        - Name: "ApiName"
+          Example: "my-api"
+
+  elasticsearch:
+    - name: "SearchableDocuments"
+      namespace: "AWS/ES"
+      unit: "Count"
+      dimensions:
+        - Name: "DomainName"
+          Example: "my-es-domain"
+
+    - name: "CPUUtilization"
+      namespace: "AWS/ES"
+      unit: "Percent"
+      dimensions:
+        - Name: "DomainName"
+          Example: "my-es-domain"
+
+    - name: "FreeStorageSpace"
+      namespace: "AWS/ES"
+      unit: "Bytes"
+      dimensions:
+        - Name: "DomainName"
+          Example: "my-es-domain"
+
+    - name: "ClusterStatus.red"
+      namespace: "AWS/ES"
+      unit: "Count"
+      dimensions:
+        - Name: "DomainName"
+          Example: "my-es-domain"
+
+    - name: "ClusterStatus.yellow"
+      namespace: "AWS/ES"
+      unit: "Count"
+      dimensions:
+        - Name: "DomainName"
+          Example: "my-es-domain"
+
+    - name: "ClusterStatus.green"
+      namespace: "AWS/ES"
+      unit: "Count"
+      dimensions:
+        - Name: "DomainName"
+          Example: "my-es-domain"
+
+    - name: "AutomatedSnapshotFailure"
+      namespace: "AWS/ES"
+      unit: "Count"
+      dimensions:
+        - Name: "DomainName"
+          Example: "my-es-domain"
+
+    - name: "AutomatedSnapshotInProgress"
+      namespace: "AWS/ES"
+      unit: "Count"
+      dimensions:
+        - Name: "DomainName"
+          Example: "my-es-domain"
+
+    - name: "AutomatedSnapshotSucceeded"
+      namespace: "AWS/ES"
+      unit: "Count"
+      dimensions:
+        - Name: "DomainName"
+          Example: "my-es-domain"
+
+    - name: "AutomatedSnapshotStart"
+      namespace: "AWS/ES"
+      unit: "Count"
+      dimensions:
+        - Name: "DomainName"
+          Example: "my-es-domain"
+
+  eventbridge:
+    - name: "Invocations"
+      namespace: "AWS/Events"
+      unit: "Count"
+      dimensions:
+        - Name: "RuleName"
+          Example: "my-event-rule"
+
+    - name: "FailedInvocations"
+      namespace: "AWS/Events"
+      unit: "Count"
+      dimensions:
+        - Name: "RuleName"
+          Example: "my-event-rule"
+
+    - name: "MatchedEvents"
+      namespace: "AWS/Events"
+      unit: "Count"
+      dimensions:
+        - Name: "RuleName"
+          Example: "my-event-rule"
+
+    - name: "ThrottledRules"
+      namespace: "AWS/Events"
+      unit: "Count"
+      dimensions:
+        - Name: "RuleName"
+          Example: "my-event-rule"
+
+    - name: "TriggeredRules"
+      namespace: "AWS/Events"
+      unit: "Count"
+      dimensions:
+        - Name: "RuleName"
+          Example: "my-event-rule"
+
+    - name: "DeadLetterInvocations"
+      namespace: "AWS/Events"
+      unit: "Count"
+      dimensions:
+        - Name: "RuleName"
+          Example: "my-event-rule"
+
+    - name: "InvocationsSentToDlq"
+      namespace: "AWS/Events"
+      unit: "Count"
+      dimensions:
+        - Name: "RuleName"
+          Example: "my-event-rule"
+
+    - name: "DLQMessagesSent"
+      namespace: "AWS/Events"
+      unit: "Count"
+      dimensions:
+        - Name: "RuleName"
+          Example: "my-event-rule"
+
+    - name: "DeliveryFailures"
+      namespace: "AWS/Events"
+      unit: "Count"
+      dimensions:
+        - Name: "RuleName"
+          Example: "my-event-rule"
+
+    - name: "DeliveryThrottling"
+      namespace: "AWS/Events"
+      unit: "Count"
+      dimensions:
+        - Name: "RuleName"
+          Example: "my-event-rule"
+
+    - name: "EventAge"
+      namespace: "AWS/Events"
+      unit: "Seconds"
+      dimensions:
+        - Name: "RuleName"
+          Example: "my-event-rule"
+
+    - name: "TriggeredRuleLatency"
+      namespace: "AWS/Events"
+      unit: "Milliseconds"
+      dimensions:
+        - Name: "RuleName"
+          Example: "my-event-rule"
+
